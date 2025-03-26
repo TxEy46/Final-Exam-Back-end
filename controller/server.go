@@ -12,6 +12,8 @@ func StartServer(db *gorm.DB) {
 			"message": "Api is now working",
 		})
 	})
-	Login(router, db)
+	// ส่ง db ไปให้ Customer
+	Customer(router, db)
+	RegisterCustomer(router, db)
 	router.Run()
 }
