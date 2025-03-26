@@ -7,15 +7,15 @@ import (
 )
 
 type Customer struct {
-	CustomerID  int       `gorm:"column:customer_id;primary_key;AUTO_INCREMENT"`
-	FirstName   string    `gorm:"column:first_name;NOT NULL"`
-	LastName    string    `gorm:"column:last_name;NOT NULL"`
-	Email       string    `gorm:"column:email;NOT NULL"`
-	PhoneNumber string    `gorm:"column:phone_number"`
-	Address     string    `gorm:"column:address"`
-	Password    string    `gorm:"column:password;NOT NULL"`
-	CreatedAt   time.Time `gorm:"column:created_at;default:CURRENT_TIMESTAMP"`
-	UpdatedAt   time.Time `gorm:"column:updated_at;default:CURRENT_TIMESTAMP"`
+	CustomerID  int       `gorm:"column:customer_id;primary_key;AUTO_INCREMENT" json:"customer_id"`
+	FirstName   string    `gorm:"column:first_name;NOT NULL" json:"first_name"`
+	LastName    string    `gorm:"column:last_name;NOT NULL" json:"last_name"`
+	Email       string    `gorm:"column:email;NOT NULL" json:"email"`
+	PhoneNumber string    `gorm:"column:phone_number" json:"phone_number"`
+	Address     string    `gorm:"column:address" json:"address"`
+	Password    string    `gorm:"column:password;NOT NULL" json:"password"`
+	CreatedAt   time.Time `gorm:"column:created_at;default:CURRENT_TIMESTAMP" json:"created_at"`
+	UpdatedAt   time.Time `gorm:"column:updated_at;default:CURRENT_TIMESTAMP" json:"updated_at"`
 }
 
 // TableName กำหนดชื่อ Table ของฐานข้อมูล
