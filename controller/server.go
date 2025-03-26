@@ -15,5 +15,8 @@ func StartServer(db *gorm.DB) {
 	// ส่ง db ไปให้ Customer
 	Customer(router, db)
 	RegisterCustomer(router, db)
+	ChangePassword(router, db)
+	AddToCart(router, db)
+	SearchProducts(router, db)
 	router.Run()
 }
